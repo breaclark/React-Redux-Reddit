@@ -50,3 +50,5 @@ Adds proper syntax highlighting to JSX:
 `npm install redux@3.7.2 --save`
 <br>
 `npm install react-redux@5.0.6 --save`
+<br>
+`npm install moment --save`

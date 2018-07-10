@@ -1,14 +1,35 @@
 import React from 'react';
 import NewPostForm from './NewPostForm';
 import PostList from './PostList';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function App(){
-  return (
-    <div>
-      <NewPostForm />
-      <PostList />
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterPostList: []
+    };
+  }
+  render() {
+    return (
+      <div>
+        <NewPostForm />
+        <PostList />
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    masterPostList: state
+  };
+};
+
+App.propTypes = {
+  masterPostList: PropTypes.object
+};
+
+export default connect()(App);
