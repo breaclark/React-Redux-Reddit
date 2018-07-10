@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react';
+import NewPostForm from './NewPostForm';
+import PostList from './PostList';
 
 function App(){
   return (
     <div>
-      <h1>Hello!</h1>
+      <NewPostForm />
+      <PostList />
     </div>
   );
 }

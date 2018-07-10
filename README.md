@@ -42,3 +42,11 @@ Adds proper syntax highlighting to JSX:
 `npm install eslint-loader --save-dev`
 <br>
 `npm install --save styled-jsx`
+<br>
+`npm install jest@20.0.4 --save-dev`
+<br>
+`npm install babel-jest@20.0.3 --save-dev`
+<br>
+`npm install redux@3.7.2 --save`
+<br>
+`npm install react-redux@5.0.6 --save`
