@@ -15,8 +15,8 @@ function NewPostForm(props){
       author: 'me',
       title: title.value,
       textArea: textArea.value,
-      numberOfUpvotes: 4,
-      numberOfDownvotes: 5,
+      numberOfUpvotes: 0,
+      numberOfDownvotes: 0,
       timeStamp: new Moment().format('MMMM Do YYYY, h:mm:ss a'),
       id: v4()
     };

@@ -7,15 +7,15 @@ function PostList(props){
     <div>
       <hr/>
       {Object.keys(props.postList).map(function(postId) {
-        const post = props.postList[postId];
-        return <Post title={post.title}
-          textArea={post.textArea}
-          author={post.author}
-          numberOfUpvotes={post.numberOfUpvotes}
-          numberOfDownvotes={post.numberOfDownvotes}
-          timeStamp={post.timeStamp}
-          postId={postId}
-          key={postId} />;
+          const post = props.postList[postId];
+          return <Post title={post.title}
+            textArea={post.textArea}
+            author={post.author}
+            numberOfUpvotes={post.numberOfUpvotes}
+            numberOfDownvotes={post.numberOfDownvotes}
+            timeStamp={post.timeStamp}
+            postId={postId}
+            key={postId} />;
       })}
     </div>
   );
