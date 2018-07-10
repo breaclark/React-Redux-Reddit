@@ -5,6 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { createStore } from 'redux';
 import postReducer from './reducers/post-reducer';
 import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
 const store = createStore(postReducer);
 
@@ -15,9 +16,11 @@ const store = createStore(postReducer);
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Provider store={store}>
-        <Component/>
-      </Provider>
+      <HashRouter>
+        <Provider store={store}>
+          <Component/>
+        </Provider>
+      </HashRouter>
     </AppContainer>,
     document.getElementById('react-app-root')
   );

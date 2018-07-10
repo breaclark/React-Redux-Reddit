@@ -3,20 +3,18 @@ import NewPostForm from './NewPostForm';
 import PostList from './PostList';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      masterPostList: []
-    };
   }
   render() {
     return (
       <div>
         <NewPostForm />
-        <PostList />
+        <PostList postList={this.props.masterPostList} />
       </div>
     );
   }
@@ -32,4 +30,4 @@ App.propTypes = {
   masterPostList: PropTypes.object
 };
 
-export default connect()(App);
+export default withRouter(connect(mapStateToProps)(App));
